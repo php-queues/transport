@@ -1,0 +1,32 @@
+{
+    "name": "php-queues/transport",
+    "description": "Transport abstraction.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "queue",
+        "php",
+        "transport"
+    ],
+    "autoload": {
+        "psr-4": {
+            "PhpQueues\\Transport\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "v.zanfir",
+            "email": "vadimzanfir@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">= 7.4"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.22"
+    },
+    "scripts": {
+        "psalm": "./vendor/bin/psalm --no-cache"
+    }
+}

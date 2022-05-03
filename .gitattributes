@@ -3,3 +3,4 @@
 README.md          export-ignore
 psalm.xml          export-ignore
 LICENSE            export-ignore
+.github            export-ignore

@@ -11,20 +11,17 @@ use PhpQueues\Transport\Producer;
 /**
  * @psalm-template M as Message
  * @psalm-template D as Destination
+ * @psalm-template P as Producer
  */
 interface DelayMessage
 {
     /**
+     * @psalm-param P $producer
      * @psalm-param M $message
      * @psalm-param D $destination
      * @psalm-param positive-int $delay
      *
      * @throws DelaysAreNotSupported
      */
-    public function delay(
-        Producer $producer,
-        Message $message,
-        Destination $destination,
-        int $delay
-    ): void;
+    public function delay(Producer $producer, Message $message, Destination $destination, int $delay): void;
 }

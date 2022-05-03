@@ -6,6 +6,7 @@ namespace PhpQueues\Transport\Delay;
 
 use PhpQueues\Transport\Message;
 use PhpQueues\Transport\Destination;
+use PhpQueues\Transport\Producer;
 
 /**
  * @psalm-template M as Message
@@ -20,5 +21,10 @@ interface DelayMessage
      *
      * @throws DelaysAreNotSupported
      */
-    public function delay(Message $message, Destination $destination, int $delay): void;
+    public function delay(
+        Producer $producer,
+        Message $message,
+        Destination $destination,
+        int $delay
+    ): void;
 }
